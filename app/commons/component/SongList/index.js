@@ -11,6 +11,7 @@ import Text from "../Text/Text.component";
 import { useNavigation } from "@react-navigation/native";
 import useStoreSong from "../../store";
 import { useCallback } from "react";
+import EmptyState from "../EmptyState";
 import Styles from "./style";
 
 const ItemList = ({
@@ -109,6 +110,9 @@ const SongList = ({ data, isLoading }) => {
           />
         )}
         estimatedItemSize={200}
+        ListEmptyComponent={() => {
+          return <EmptyState keyword={"Song"} />;
+        }}
         ListFooterComponent={() => {
           return isLoading ? (
             <View style={Styles.loader}>

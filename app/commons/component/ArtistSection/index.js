@@ -1,6 +1,7 @@
 import { View, Text, ActivityIndicator, ScrollView } from "react-native";
 import SongList from "../SongList/index";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import EmptyState from "../EmptyState";
 import Styles from "./style";
 
 const defaultIMg =
@@ -44,6 +45,9 @@ const ArtistSection = ({ data, isLoading }) => {
               />
             </View>
           ))
+        )}
+        {!isLoading && !Object?.keys(data)?.length && (
+          <EmptyState keyword="Artist info" />
         )}
       </ScrollView>
     </>

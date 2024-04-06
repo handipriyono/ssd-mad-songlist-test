@@ -14,7 +14,9 @@ export default StyleSheet.create({
   },
   headerWrap: {
     flex: 1,
+    maxWidth: "95%",
     paddingHorizontal: 10,
+    marginHorizontal: 5,
     flexDirection: "row",
     gap: 6,
     alignItems: "center",
