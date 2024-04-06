@@ -60,6 +60,7 @@ function MyTabs() {
         options={({ navigation, route }) => ({
           tabBarActiveTintColor: "#F94C57",
           tabBarShowLabel: false,
+          headerTitleAlign: "center",
           // headerShown: false,
           tabBarIcon: ({ color, size, focused }) => (
             <MaterialIcons name="favorite" size={24} color={color} />
@@ -67,7 +68,7 @@ function MyTabs() {
           headerLeft: () => {
             return (
               <TouchableOpacity
-                style={{ paddingRight: 10 }}
+                style={{ paddingLeft: 15 }}
                 onPress={() => navigation.goBack()}
               >
                 <AntDesign name="arrowleft" size={20} color="#4B4B4B" />
