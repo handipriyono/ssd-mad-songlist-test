@@ -1,4 +1,4 @@
-import { View, SafeAreaView } from "react-native";
+import { View } from "react-native";
 import TextInputCustom from "../../commons/component/TextInput/TextInput.component";
 import Switch from "../../commons/component/Switch";
 import SongList from "../../commons/component/SongList";
@@ -7,6 +7,7 @@ import useSearch from "./hooks/useSearch";
 import useQueryMusic from "./hooks/useQueryMusic";
 import { StatusBar } from "expo-status-bar";
 import Styles from "./style";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = ({ navigation }) => {
   const {
