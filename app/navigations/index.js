@@ -22,8 +22,13 @@ function MyTabs() {
         name="Home"
         component={Home}
         options={{
-          tabBarActiveTintColor: "#000",
+          tabBarActiveTintColor: "#F94C57",
           headerTitle: "",
+          headerShown: false,
+          headerShadowVisible: false,
+          headerStyle: {
+            // height: 40,
+          },
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
             <Fontisto name="applemusic" size={24} color={color} />
@@ -53,7 +58,7 @@ function MyTabs() {
         name="Favourite"
         component={Favourite}
         options={({ navigation, route }) => ({
-          tabBarActiveTintColor: "#000",
+          tabBarActiveTintColor: "#F94C57",
           tabBarShowLabel: false,
           // headerShown: false,
           tabBarIcon: ({ color, size, focused }) => (
@@ -62,10 +67,10 @@ function MyTabs() {
           headerLeft: () => {
             return (
               <TouchableOpacity
-                style={{ paddingLeft: 20 }}
+                style={{ paddingRight: 10 }}
                 onPress={() => navigation.goBack()}
               >
-                <AntDesign name="arrowleft" size={24} color="#4B4B4B" />
+                <AntDesign name="arrowleft" size={20} color="#4B4B4B" />
               </TouchableOpacity>
             );
           },
@@ -91,9 +96,15 @@ const NavigationList = () => {
               options={({ navigation, route }) => ({
                 headerTitleAlign: "center",
                 headerTitle: route?.params?.title,
+                headerTitleStyle: {
+                  fontSize: 14,
+                },
                 headerLeft: () => (
-                  <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <AntDesign name="arrowleft" size={24} color="#4B4B4B" />
+                  <TouchableOpacity
+                    style={{ paddingRight: 10 }}
+                    onPress={() => navigation.goBack()}
+                  >
+                    <AntDesign name="arrowleft" size={20} color="#4B4B4B" />
                   </TouchableOpacity>
                 ),
               })}
