@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   outer: {
-    width: 140,
+    width: 150,
     flexDirection: "row",
     borderRadius: 10,
     borderWidth: 1,

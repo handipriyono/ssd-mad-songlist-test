@@ -12,10 +12,16 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#eee",
   },
-  headerWrap: { flex: 1, paddingHorizontal: 10, alignItems: "center" },
+  headerWrap: {
+    flex: 1,
+    paddingHorizontal: 10,
+    flexDirection: "row",
+    gap: 6,
+    alignItems: "center",
+  },
   itemWrap: {
     minHeight: 80,
-    paddingBottom: 50,
+    paddingBottom: 30,
   },
   loading: {
     marginTop: 100,
@@ -24,17 +30,17 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   name: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: "bold",
-    paddingTop: 5,
+    paddingVertical: 5,
     textAlign: "left",
   },
   img: {
-    width: "60%",
-    height: 150,
+    width: 100,
+    height: 100,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 15,
+    borderRadius: 50,
   },
   textWrapper: {
     paddingLeft: 5,

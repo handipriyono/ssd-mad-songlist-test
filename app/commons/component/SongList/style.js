@@ -4,7 +4,7 @@ export default StyleSheet.create({
   outer: {
     marginHorizontal: 10,
     backgroundColor: "#fff",
-    minHeight: 65,
+    minHeight: 70,
     borderRadius: 10,
     flexDirection: "row",
     padding: 5,
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  img: { width: 60, height: "100%", borderRadius: 10 },
+  img: { width: 70, height: "100%", borderRadius: 10 },
   textWrapper: {
     paddingLeft: 5,
     flex: 1,

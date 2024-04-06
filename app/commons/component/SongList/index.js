@@ -37,7 +37,7 @@ const ItemList = ({
             });
           }}
         >
-          <View>
+          <View style={{ paddingRight: 10 }}>
             <Image
               style={Styles.img}
               source={
@@ -66,7 +66,7 @@ const ItemList = ({
           <MaterialIcons
             name={isFaved ? "favorite" : "favorite-outline"}
             size={20}
-            color={isFaved ? "orange" : "black"}
+            color={isFaved ? "#fa4b5a" : "black"}
           />
         </TouchableWithoutFeedback>
       </View>

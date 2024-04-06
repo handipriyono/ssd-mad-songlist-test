@@ -5,7 +5,7 @@ import { EvilIcons } from "@expo/vector-icons";
 const Switch = ({ active, onClick, titleLeft, titleRight }) => {
   const checkStyle = ({ isActive }) => {
     return {
-      bg: isActive ? "#0000fb" : "#fff",
+      bg: isActive ? "#000" : "#fff",
       text: isActive ? "#FFF" : "#000",
       border: isActive ? 1 : 0,
     };
@@ -30,6 +30,7 @@ const Switch = ({ active, onClick, titleLeft, titleRight }) => {
             <Text
               style={{
                 paddingLeft: 5,
+                paddingHorizontal: 5,
                 textAlign: "center",
                 color: checkStyle({ isActive: active === 1 })?.text,
               }}

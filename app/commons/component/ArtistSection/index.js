@@ -1,6 +1,6 @@
 import { View, Text, ActivityIndicator, ScrollView } from "react-native";
-import { Image } from "expo-image";
 import SongList from "../SongList/index";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Styles from "./style";
 
 const defaultIMg =
@@ -11,21 +11,15 @@ const ItemActrist = ({ data = [], isLoading }) => {
     <>
       <View key={data?.trackId} style={Styles.outer}>
         <View style={Styles.headerWrap}>
-          <Image
-            style={Styles.img}
-            source={
-              data?.artworkUrl100 ||
-              data?.artworkUrl60 ||
-              data?.artworkUrl30 ||
-              defaultIMg
-            }
-            contentFit="cover"
-            transition={200}
+          <MaterialCommunityIcons
+            name="account-music"
+            size={20}
+            color="#F94C57"
           />
           <Text style={Styles.name}>{data?.name}</Text>
         </View>
       </View>
-      <View style={{ flex: 1, minHeight: 3 }}>
+      <View style={{ flex: 1, minHeight: 3, backgroundColor: "#fff" }}>
         <SongList data={data?.items} isLoading={isLoading} />
       </View>
     </>
