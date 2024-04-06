@@ -8,7 +8,6 @@ const useQueryMusic = ({ params }) => {
   const setArtistList = useMusicStore((state) => state.setArtistList);
   const songList = useMusicStore((state) => state.songList);
   const artistList = useMusicStore((state) => state.artistList);
-  const favList = useMusicStore((state) => state.favoriteList);
 
   const { data, isLoading, refetch, isFetching } = useQuery({
     queryKey: ["list-music", params()],
@@ -21,7 +20,9 @@ const useQueryMusic = ({ params }) => {
       const { entity, attribute } = params();
       if (entity === "musicTrack") {
         setSongList(data?.results || []);
-      } else if (attribute === "allArtistTerm") {
+      }
+
+      if (attribute === "allArtistTerm") {
         setArtistList(data?.results || []);
       }
     }
@@ -53,7 +54,7 @@ const useQueryMusic = ({ params }) => {
   return {
     artistList: formatArtist(artistList || []),
     data: songList,
-    isLoading,
+    isLoading: isLoading || isFetching,
   };
 };
 

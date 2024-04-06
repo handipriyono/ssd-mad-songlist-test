@@ -27,6 +27,7 @@ const useSearch = () => {
       };
     }
     return {
+      entity: "musicTrack",
       attribute: "allArtistTerm",
       term: debounceSearch,
     };
